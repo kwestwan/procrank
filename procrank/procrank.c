@@ -405,7 +405,7 @@ exit:
          * to give the user "<unknown>" here, but otherwise they get to look
          * at a blank.
          */
-        if (strncpy(buf, unknown_cmdline, (size_t)len) >= (size_t)len) {
+        if (strlcpy(buf, unknown_cmdline, (size_t)len) >= (size_t)len) {
             rc = 4;
         }
     }
